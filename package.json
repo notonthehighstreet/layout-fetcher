@@ -1,0 +1,31 @@
+{
+  "name": "noths-layout",
+  "version": "0.0.0",
+  "description": "Express middleware to provide the main noths layout",
+  "main": "noths-layout.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danhart/noths-layout.git"
+  },
+  "keywords": [
+    "layout",
+    "template",
+    "mustache",
+    "express"
+  ],
+  "author": "Dan Hart",
+  "bugs": {
+    "url": "https://github.com/danhart/noths-layout/issues"
+  },
+  "homepage": "https://github.com/danhart/noths-layout",
+  "dependencies": {
+    "mustache": "^0.8.2",
+    "request": "^2.36.0"
+  }
+}

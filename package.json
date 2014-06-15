@@ -1,8 +1,8 @@
 {
-  "name": "noths-layout",
+  "name": "layout-fetcher",
   "version": "0.0.0",
-  "description": "Express middleware to provide the main noths layout",
-  "main": "noths-layout.js",
+  "description": "Express middleware to fetch remote layouts",
+  "main": "layout-fetcher.js",
   "directories": {
     "test": "test"
   },
@@ -11,21 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/danhart/noths-layout.git"
+    "url": "https://github.com/danhart/layout-fetcher.git"
   },
   "keywords": [
     "layout",
-    "template",
-    "mustache",
-    "express"
+    "express",
+    "middleware"
   ],
   "author": "Dan Hart",
   "bugs": {
     "url": "https://github.com/danhart/noths-layout/issues"
   },
-  "homepage": "https://github.com/danhart/noths-layout",
+  "homepage": "https://github.com/danhart/layout-fetcher",
   "dependencies": {
-    "mustache": "^0.8.2",
     "request": "^2.36.0"
   }
 }

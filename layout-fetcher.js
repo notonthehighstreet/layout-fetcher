@@ -4,7 +4,6 @@ var request = require('request');
  * Fetch a layout from a remote service, proxying cookies
  *
  * @param {Object} [options]
- * @param {Function} [doneCallback]
  * @return {Function}
  * @api public
  */

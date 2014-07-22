@@ -34,8 +34,9 @@ module.exports = function(options) {
             res.setHeader("Set-Cookie", layoutRes.headers['set-cookie']);
             layout = layoutBody;
 
-            options.done(layout);
-
+            if (options.done && typeof(options.done) == 'function')
+                options.done(layout);
+            }
             next();
         });
     };

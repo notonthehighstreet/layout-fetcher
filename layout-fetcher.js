@@ -27,7 +27,7 @@ module.exports = function(options) {
 
         request(requestOptions, function (layoutError, layoutRes, layoutBody) {
             if (layoutError || layoutRes.statusCode !== 200) {
-                return next(new Error('Failed to fetch noths layout'));
+                return next(new Error('Failed to fetch layout'));
             }
 
             // Provide cookies to the client provided by the layout service

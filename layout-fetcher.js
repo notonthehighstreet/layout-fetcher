@@ -1,4 +1,5 @@
 var request = require('request');
+var mustache = require('mustache');
 
 /**
  * Fetch a layout from a remote service, proxying cookies
@@ -33,10 +34,14 @@ module.exports = function(options) {
             // Provide cookies to the client provided by the layout service
             res.setHeader("Set-Cookie", layoutRes.headers['set-cookie']);
             layout = layoutBody;
+            
+            req.layout = {
+                html: layout,
+                render: function(view) {
+                    return mustache.render(this.html, view);
+                }
+            };
 
-            if (options.done && typeof(options.done) == 'function')
-                options.done(layout);
-            }
             next();
         });
     };

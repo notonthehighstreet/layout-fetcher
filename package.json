@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/danhart/layout-fetcher",
   "dependencies": {
-    "request": "^2.36.0"
+    "request": "^2.36.0",
+    "mustache": "^0.8.1"
   }
 }

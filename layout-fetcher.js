@@ -5,12 +5,13 @@ var mustache = require('mustache');
  * Fetch a layout template from a remote service, proxying cookies
  * Currently the only template format supported is mustache
  *
+ * @param {String} [url]
  * @param {Object} [options]
  * @return {Function}
  * @api public
  */
 
-module.exports = function(options) {
+module.exports = function(url, options) {
     var layout;
     var options = options || {};
 
@@ -29,7 +30,7 @@ module.exports = function(options) {
         }
 
         var requestOptions = {
-            url: options.url,
+            url: url,
 
             // Pass cookies from the client through to the layout service
             headers: { cookie: req.headers.cookie }

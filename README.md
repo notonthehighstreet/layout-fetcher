@@ -1,6 +1,8 @@
 layout-fetcher
 ==============
 
+Express middleware for fetching layout templates.
+
 Currently only supports mustache templates.
 
 Useful for fetching dynamic layouts.

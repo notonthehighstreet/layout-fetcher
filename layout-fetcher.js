@@ -31,14 +31,16 @@ module.exports = function(url, options) {
 
         var requestOptions = {
             url: url,
-
             headers: {
-                // Pass cookies from the client through to the layout service
-                cookie: req.headers.cookie,
-                // Provide the remote IP address to the layout service
-                'X-Forwarded-For': req.connection.remoteAddress
+              // Provide the remote IP address to the layout service
+              'X-Forwarded-For': req.connection.remoteAddress
             }
         };
+
+        if (req.headers.cookie !== undefined) {
+            // Pass cookies from the client through to the layout service
+            requestOptions.headers.cookie = req.headers.cookie;
+        }
 
         request(requestOptions, function (requestError, requestResponse, responseBody) {
             if (requestError || requestResponse.statusCode !== 200) {
